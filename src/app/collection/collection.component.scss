@@ -1,0 +1,12 @@
+@import '../variables.scss';
+
+@media(max-width: 1070px){
+    .collection__list{
+        margin: 20px 10px 20px;}
+}
+
+.collection{
+    &__list{
+        margin: 80px 100px 50px;}
+    }
+

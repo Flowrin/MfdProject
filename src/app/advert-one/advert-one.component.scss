@@ -1,0 +1,89 @@
+@import '../variables.scss';
+
+@media(max-width: 1320px){
+    .advert-one__text{
+        margin: 0px 20px;}
+    
+
+    .advert-one__text{
+        font-size: 2em;}
+    }
+@media(max-width: 1020px){
+    .advert-one__text{
+        font-size: 1.5em;}
+    }
+    
+@media(max-width: 900px){
+    .advert-one__text{
+        font-size: 1em;}
+
+    .advert-one__text-center{
+        padding: 45px 65px;}
+    }
+@media(max-width: 610px){
+    .advert-one__text-center{
+        padding: 25px 35px;}
+    }
+@media(max-width: 470px){
+    .advert-one__text-center{
+        padding: 10px 20px;}
+
+    .advert-one__text{
+        font-size: 0.8em;}
+    }
+
+.advert-one{
+    &__container{
+        width: 100%;
+        position: relative;}
+        
+     &__container-text{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;}
+
+    &__text{
+        margin: 0px 100px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 3em;
+        color: $alt-text-color;
+        text-transform: uppercase;
+        text-align: center;}
+
+   &__text-center{
+        align-items: center;
+        border-radius: 50%;
+        padding: 65px 85px;}
+
+    &__text-center-small{
+        font-size: 1em;
+        font-weight: bold;}
+
+    &__text-center-pro{
+        font-size: 4em;
+        line-height: 0.7em;
+
+        &::after{
+            content: '%';
+            font-size: 0.25em;
+            position: absolute;
+            transform: translate(0px, -20%);}
+        }
+    &__img{
+        width: 100%;
+        display: block;}
+    
+    
+    &__redirect{
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;}
+
+    
+ 
+    }

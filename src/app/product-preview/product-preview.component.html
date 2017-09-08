@@ -1,0 +1,17 @@
+<section class="preview__container">
+  <header class="hide">Product preview</header>
+  <div class="preview__menu">
+    <button (click)="clickDisplay()" class="preview__menu-btn"><h2 class="preview__menu-items" [class.preview__menu-items--selected]="show.new">New arrivals</h2></button>
+    <button  class="preview__menu-btn"><h2 class="preview__menu-items">Top sellers</h2></button>
+    <button  class="preview__menu-btn"><h2 class="preview__menu-items" >Featured</h2></button>
+  </div>
+  <div class="preview__items-container" [class.preview__items-container--show]="show.new">
+    <app-product-simple class="preview__item" *ngFor="let product_id of products.new" [product_id]="product_id">
+    </app-product-simple>
+  </div>
+  <div class="preview__items-container" [class.preview__items-container--show]="show.new">
+    <app-product-simple class="preview__item" *ngFor="let product_id of products.new" [product_id]="product_id">
+    </app-product-simple>
+  </div>
+
+</section>

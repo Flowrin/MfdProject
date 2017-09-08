@@ -1,0 +1,96 @@
+@import '../variables.scss';
+@media(max-width: 1000px){
+    .home-upper__container{
+        margin-left: 10px;
+        margin-right: 10px;}
+
+    .home-adverts__container{
+        margin: 0px;}
+
+    .home-preview__container{
+        margin: 50px 10px;}
+    }
+@media(max-width: 800px){
+    .home-upper__container{
+        flex-direction: column;
+        margin: 10px;}
+    
+    .home-upper__lookbook{
+        width: auto;}
+
+    .home-upper__newsletter{
+        width:  auto;}
+    }
+
+
+.home-upper{
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 95px;
+        margin-bottom: 90px;
+        margin-left: 100px;
+        margin-right: 100px;}
+
+        &__lookbook{
+        width: 30%;
+        position: relative;}
+
+        &__lookbook-link{
+       text-decoration: none;
+       border: 2px solid $alt-text-color;
+       padding-left: 20px;
+       padding-right: 20px;
+       padding-top: 30px;
+       padding-bottom: 30px;
+       font-size: xx-large;
+       color: $alt-text-color;
+       width: 250px;}
+
+       &__lookbook-link--bold{
+        font-weight: bold;}
+
+        &__lookbook-link-container{
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;      }  
+        
+        &__lookbook-img{
+        width: 100%;
+        max-height: 440px;
+        height: auto;}
+
+        &__newsletter{
+        width: 40%;
+        height: 100%;
+        box-shadow: 0px 19px 34px -1px rgba(0, 0, 0, 0.26);}
+        
+.home-brands{
+     container{
+        width: 100%;}
+     }
+
+.home-adverts{
+     container{
+        margin: 100px;}
+     }
+
+.home-preview{
+     container{
+        margin: 90px 100px;}
+     }
+.home-advert-one{
+     container{
+        width: 100%;}
+     }
+
+.home-opinion{
+     container{
+        width: 100%;}
+     }
+    }

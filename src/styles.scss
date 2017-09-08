@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@import './app/variables.scss';
+
+body {
+    font: 100% $font-stack;}
+    
+.display-none, .hide{
+    display: none;}
+
+.center {
+    margin: auto;}
+
+.fild{
+    height: 100%;
+    width: 100%;
+    display: block;}
+
+.w{
+    width: 8px;}
+
+.space-between{
+    justify-content: space-between;}
+
+.w50{
+    width: 50%;}
+
+.w45{
+    width: 45%;}
+
+.h100{
+    height: 100%;}
+  
+.click-through{
+    pointer-events: none;}

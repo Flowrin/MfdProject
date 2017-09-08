@@ -1,0 +1,13 @@
+@import '../variables.scss';
+
+
+.product{
+    
+
+    &__main{
+        display: flex;
+        justify-content: space-between;
+        margin: 110px 100px;
+        flex-direction: row;}
+
+    }

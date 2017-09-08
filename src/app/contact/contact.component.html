@@ -1,0 +1,41 @@
+<section class="contact__container">
+    <article class="contact__form-container">
+        <header><h2 class="contact__form-header">Contact us</h2></header>
+        <form novalidate #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <label class="formular__label">
+            <span class="formular__span">Full name</span>
+            <input class="formular__input" type="text" placeholder="Your full name" name="name" ngModel #userName="ngModel" minlength="5" required>
+          </label>
+          <div *ngIf="userName.invalid" class="error"> Name is required</div>
+           <div *ngIf="userName.errors?.minlength && userName.touched" class="error">Minimum of 5 characters
+           </div>
+          <div ngModelGroup="account" #userConfirm="ngModelGroup">
+            <label class="formular__label">
+              <span class="formular__span ">Email address</span>
+              <input class="formular__input" type="email"placeholder="Your email address"name="email" ngModel #userEmail="ngModel" required>
+            </label>
+            <label class="formular__label">
+              <span>Confirm address</span>
+              <input class="formular__input" type="email"placeholder="Confirm your email address"name="confirm" ngModel #userConfirm="ngModel" required>
+            </label>
+            <div *ngIf="userEmail.invalid" class="error"> Invalid Email</div>
+            <div *ngIf="userConfirm.invalid && userConfirm.touched" class="error"> Both emails are required</div>
+            <label class="formular__label">
+              <span class="formular__span">Comment</span>
+              <p class="text">
+                  <textarea class="formular__text" type="text"placeholder="Comment"name="comment"ngModel #usercom="ngModel" minlength="10" required name="text" id="comment" placeholder="Comment"></textarea> </p>
+             
+            </label>
+            <div *ngIf="usercom.errors?.required && usercom.touched" class="error">
+             Commentis required
+             </div>
+             <div *ngIf="userName.errors?.minlength && userName.touched" class="error">
+              Minimum of 10 characters
+             </div>
+          </div>
+          <button class="formular__btn" [disabled]="f.invalid">Send</button>
+        </form>
+    </article>
+  
+  </section>
+  

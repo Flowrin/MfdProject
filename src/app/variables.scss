@@ -1,0 +1,32 @@
+@mixin primary-background-color($pbc){
+    background-color: rgba(51, 208, 222, $pbc);
+}
+$font-stack: 'Open Sans', sans-serif;
+$pc: #33D0DE;
+$default-color: gray;
+$font-color: darken($default-color, 60%);
+$light-color: lighten($default-color, 20%);
+$dark-color: darken($default-color, 20%);
+$contrast-color: teal;
+$warning-color: yellow;
+$important-color: red;
+$alt-color: #333;
+$text-color: #000;
+$alt-text-color: #fff;
+$newsletter-border-color: #dcdcdc;
+$top-brands-background-color: #f6f6f6;
+$social-media-icon-color: #C5C5C4;
+$mbc: #555;
+$collection-nav-btn: #9C9C9C;
+$ext-design-color: #7e7e7e;
+$design-color: #7e7e7e;
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+  }
+  
+  @mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+  }

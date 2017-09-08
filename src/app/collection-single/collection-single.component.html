@@ -1,0 +1,50 @@
+<div class="collection__header">
+  <h2 class="collection__h"><header>New collection</header><div class="w"></div> ({{ collection.from_page }}-{{ collection.to_page }} of {{ collection.item_count }})</h2>
+  <div class="collection__header-container">
+    <button id="menu-sort-by" class="collection__header-btn" >
+      Sort by
+      <div class="w"></div>
+      <i class="fa fa-caret-down" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  <div class="collection__header-container">
+    <button id="menu-features" class="collection__header-btn" >
+      Features
+      <div class="w"></div>
+      <i class="fa fa-caret-down" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  <div class="collection__header-container">
+    <button id="menu-size" class="collection__header-btn" >
+      Size
+      <div class="w"></div>
+      <i class="fa fa-caret-down" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  <div class="collection__header-container">
+    <button id="menu-colour" class="collection__header-btn"  >
+      Colour<div class="w"></div>
+      <i class="fa fa-caret-down" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  <div class="collection__header-container"> 
+    <button id="menu-price" class="collection__header-btn" >
+      Price<div class="w"></div>
+      <i class="fa fa-caret-down" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+</div>
+<section class="collection__item-container">
+  <header class="hide">New collection</header>
+  <div class="collection__item-exterior" [class.collection__item-exterior--hide]="product_id == null" *ngFor="let product_id of collection.counter">
+    <app-product-simple *ngIf="product_id != null" [product_id]="product_id"></app-product-simple> 
+  </div>
+</section>
+<nav class="collection__nav-container">
+    <button class="collection__nav-btn" [class.collection__nav-btn--selected]="collection.current_page == i - 1" (click)="buildPages($event)" *ngFor="let i of collection.page_count" id="btn-page-number_{{i}}">{{i}}</button>
+</nav>

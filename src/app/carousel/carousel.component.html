@@ -1,0 +1,16 @@
+<article class="carousel__container" *ngIf="selected_index != -1">
+  <header class="hide"></header>
+  <div class="carousel__menu">
+    <img class="carousel__menu-img" [class.carousel__menu-img--selected]="img == data[selected_index]" *ngFor="let img of data" src="{{ img.img }}" >
+  </div>
+  <div class="carousel__img-container">
+    <div class="carousel__heart"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+    <button (click)="clickLeft()" type="button" class="carousel__carousel-arrow carousel__carousel-arrow--left">
+      <img src="/assets/img/arrow_left.png" alt="Left arrow">
+    </button>
+    <button (click)="clickRight()" type="button" class="carousel__carousel-arrow carousel__carousel-arrow--right">
+        <img src="/assets/img/arrow_right.png" alt="Right arrow">
+    </button>
+    <img class="carousel__img" src="{{ data[selected_index].img }}" alt="{{ data[selected_index].alt }}">
+  </div>
+</article>
